@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h2{
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<h2>EGENKONTROLL</h2>
+
+<table>
+  <tr>
+    <th>Allerede kjente avvik</th>
+    <th>Resultat</th>
+    <th>Anmerkninger</th>
+  </tr>
+  
+  <tr>
+    <td>Mottatt avviksmelding på forutgående arbeider:</td>
+        <td> 
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+ 
+  <tr>
+    <td>Registrerte avvik på forutgående / tilstøtende konstruksjoner</td>
+        <td>
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+  
+  <tr>
+    <td>Hvor i bygget er avviket: <label for="etg">ETG:</label>
+        <input type="text" id="etg" name="brukernavn" placeholder="Fyll inn ETG" required> 
+        <label for="fasade">Fasade:</label>
+        <input type="text" id="fasade" name="fasade" placeholder="Fyll inn Fasade" required> 
+        <label for="byggeel">Byggeel:</label>
+        <input type="text" id="byggeel" name="byggeel" placeholder="Fyll inn Byggeel" required></td>
+    <td>
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td> 
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td>Avvik varslet:</td>
+    <td>
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Mottatt beordring om montasje av egne konstruksjoner med avvik:</td>
+    <td>  
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td> 
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Beskrivelse av montasjeavvik egne konstruksjoner</td>
+    <td>    
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>      
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
