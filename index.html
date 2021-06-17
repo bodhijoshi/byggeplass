@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Digitalisering av byggeplass</title>
 <style>
 table {
   font-family: arial, sans-serif;
@@ -22,21 +23,26 @@ h2{
     text-align: center;
 }
 
+.nice{
+  border: black solid;
+} 
+
 </style>
 </head>
+
 <body>
 
 <h2>EGENKONTROLL</h2>
 
 <table>
   <tr>
-    <th>Allerede kjente avvik</th>
+    <th>ALLEREDE KJENTE AVVIK</th>
     <th>Resultat</th>
     <th>Anmerkninger</th>
   </tr>
   
   <tr>
-    <td>Mottatt avviksmelding på forutgående arbeider:</td>
+    <td>1,0) Mottatt avviksmelding på forutgående arbeider:</td>
         <td> 
             <input type="radio" name="answer" value="ja" id="option-1">
             <label for="option-1">Ja</label>
@@ -50,7 +56,7 @@ h2{
   </tr>
  
   <tr>
-    <td>Registrerte avvik på forutgående / tilstøtende konstruksjoner</td>
+    <td>1,1) Registrerte avvik på forutgående / tilstøtende konstruksjoner</td>
         <td>
             <input type="radio" name="answer" value="ja" id="option-1">
             <label for="option-1">Ja</label>
@@ -64,7 +70,7 @@ h2{
   </tr>
   
   <tr>
-    <td>Hvor i bygget er avviket: <label for="etg">ETG:</label>
+    <td>1,2) Hvor i bygget er avviket: <label for="etg">ETG:</label>
         <input type="text" id="etg" name="brukernavn" placeholder="Fyll inn ETG" required> 
         <label for="fasade">Fasade:</label>
         <input type="text" id="fasade" name="fasade" placeholder="Fyll inn Fasade" required> 
@@ -83,7 +89,7 @@ h2{
   </tr>
  
   <tr>
-    <td>Avvik varslet:</td>
+    <td>1,3) Avvik varslet:</td>
     <td>
         <input type="radio" name="answer" value="ja" id="option-1">
         <label for="option-1">Ja</label>
@@ -97,7 +103,7 @@ h2{
   </tr>
   
   <tr>
-    <td>Mottatt beordring om montasje av egne konstruksjoner med avvik:</td>
+    <td>1,4) Mottatt beordring om montasje av egne konstruksjoner med avvik:</td>
     <td>  
         <input type="radio" name="answer" value="ja" id="option-1">
         <label for="option-1">Ja</label>
@@ -111,7 +117,7 @@ h2{
   </tr>
   
   <tr>
-    <td>Beskrivelse av montasjeavvik egne konstruksjoner</td>
+    <td>1,5) Beskrivelse av montasjeavvik egne konstruksjoner</td>
     <td>    
         <input type="radio" name="answer" value="ja" id="option-1">
         <label for="option-1">Ja</label>
@@ -125,6 +131,296 @@ h2{
   </tr>
 
 </table>
+
+<!----------------------------ER SAMME TABELL SOM OVENFOR BARE FORSKJELL PÅ TEKSTEN------------------------------->
+<br><br>
+<table>
+  <tr>
+    <th>MONTASJE</th>
+    <th>Resultat</th>
+    <th>Anmerkninger</th>
+  </tr>
+  
+  <tr>
+    <td>2,0) Riktig "element"på rett sted: Type /ID-nr. kontrollert mot skjemategninger og krav.</td>
+        <td> 
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+ 
+  <tr>
+    <td>2,1) Innfesting utført iht. tegning, vinduet i lodd side vegs og inn/ut av planet?</td>
+        <td>
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+  
+  <tr>
+    <td>2,2) Vinduet er plassert i åpning med omløpende spalt mellom 10 og 25 mm? Angi største og minste spalt</td>
+    <td>
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Størst</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Minst</label> 
+
+        <label for="verdi"></label>
+            <textarea name="text" id="text" placeholder="Verdi"></textarea>
+    </td>
+    <td> 
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td>2,3) Korrekt utført drenering og lufting iht Profilteams montasjeanvisning. (Plastomslag).</td>
+    <td>
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>2,4) Er bolter installert ihht NS-EN 1090-2, pkt 8.3</td>
+    <td>  
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td> 
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>2,5) Kontroller avstand fra utvendig montasjeplate til skulder betong. Minimum 10 mm, maks 13. Angi målt verdi </td>
+    <td>    
+      <label for="verdi"></label>
+      <textarea name="text" id="text" placeholder="Verdi"></textarea>
+    </td>
+    <td>      
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td>2,6) Er fuge utført korrekt og KS skjema mottatt fra UE</td>
+    <td>    
+      <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>      
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td>2,7) Treverk er montert uten synlige skader og med riktig type skruer (fargede skruer A4)?</td>
+    <td>    
+      <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>      
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td>2,8) Er sålebenkbeslag og beslag på bånnstokk montert med syrefaste skruer og med korrekte luftespalter?</td>
+    <td>    
+      <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>      
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td>2,9) Produktet er levert uten feil/skader og fungerer som den skal?</td>
+    <td>    
+      <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td>      
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+</table>
+
+<!------------------------------------------------------------------------------------------------------------->
+<br><br>
+<table>
+  <tr>
+    <th>SOLSKJERMING</th>
+    <th>Resultat</th>
+    <th>Anmerkninger</th>
+  </tr>
+  
+  <tr>
+    <td>3,0) Er Solskjerming montert</td>
+        <td> 
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+ 
+  <tr>
+    <td>3,1) Er det tettet rundt kabelgjennomføring og strekkavlastning strammet?</td>
+        <td>
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+  
+  <tr>
+    <td>3,2) Mottatt egenkontrollskjema for solavskjerming</td>
+    <td>
+        <input type="radio" name="answer" value="ja" id="option-1">
+        <label for="option-1">Ja</label>
+        <input type="radio" name="answer" value="nei" id="option-2">
+        <label for="option-2">Nei</label>
+    </td>
+    <td> 
+        <label for="anmerkning">Anmerkning:</label>
+        <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+    </td>
+  </tr>
+
+</table>
+
+<!------------------------------------------------------------------------------------------------------------->
+<br><br>
+<table>
+  <tr>
+    <th>FEIL/SKADER</th>
+    <th>Resultat</th>
+    <th>Anmerkninger</th>
+  </tr>
+  
+  <tr>
+    <td>4,0) Hva er feil / skadet:</td>
+        <td> 
+            <label for="verdi"></label>
+            <textarea name="text" id="text" placeholder="Fyll inn:"></textarea>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+ 
+  <tr>
+    <td>4,1) Feil/skader utbedret:</td>
+        <td>
+            <input type="radio" name="answer" value="ja" id="option-1">
+            <label for="option-1">Ja</label>
+            <input type="radio" name="answer" value="nei" id="option-2">
+            <label for="option-2">Nei</label>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+
+</table>
+
+<!------------------------------------------------------------------------------------------------------------->
+<br><br>
+<table>
+  <tr>
+    <th>AVSLUTNINGSVIS</th>
+    <th>Resultat</th>
+    <th>Anmerkninger</th>
+  </tr>
+  
+  <tr>
+    <td>5,0) Utført i hht tegning:</td>
+        <td> 
+            <label for="verdi"></label>
+            <textarea name="text" id="text" placeholder="Fyll inn:"></textarea>
+        </td>
+        <td>
+            <label for="anmerkning">Anmerkning:</label>
+            <textarea name="anmerkning" id="anmerkning" placeholder="Fyll inn anmerkning"></textarea>
+        </td>
+  </tr>
+ 
+</table>
+
+<!------------------------------------------------------------------------------------------------------------->
+<br><br><br> <!---->
+
+
+<table class="nice">
+  <tr>
+    <td>Prosjektnummer: <label for="verdi"></label>
+      <textarea name="text" id="text" placeholder="Fyll inn:"></textarea>
+    </td>
+      <td>Prosjektleder: <label for="verdi"></label>
+        <textarea name="text" id="text" placeholder="Fyll inn:"></textarea>
+      </td> 
+  </tr>
+
+  <tr>
+    <td>Prosjektnavn: <label for="verdi"></label>
+      <textarea name="text" id="text" placeholder="Fyll inn:"></textarea>
+    </td>
+      <td>Byggeplassleder: <label for="verdi"></label>
+        <textarea name="text" id="text" placeholder="Fyll inn:"></textarea>
+      </td> 
+  </tr>
+</table>
+
 
 </body>
 </html>
